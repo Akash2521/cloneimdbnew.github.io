@@ -1,0 +1,20 @@
+const createCustomList = (movies, listName) => {
+  const newList = {
+    Title: listName,
+    Movies: movies,
+  };
+  const lists = [...movies, newList];
+  return lists;
+};
+
+const addComment = (movie, comment) => {
+  const newComments = [...movie.Comments, comment];
+  movie.Comments = newComments;
+  return movie;
+};
+
+const followUser = (user, followedUser) => {
+  const newFollowing = [...user.Following, followedUser];
+  user.Following = newFollowing;
+  return user;
+};
